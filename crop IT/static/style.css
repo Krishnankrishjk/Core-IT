@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e6f2e6, #d9f0ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+.form-container {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+    max-height: 90vh;
+    background: #ffffff;
+}
+
+.result-container {
+    flex: 1;
+    background: #f0fbf2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-left: 2px solid #e0e0e0;
+}
+
+h1 {
+    text-align: center;
+    color: #2d6a4f;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+input:focus {
+    border-color: #40916c;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #40916c;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #2d6a4f;
+}
+
+.result-box, .error-box, .placeholder-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.result-box h2 {
+    color: #1b4332;
+    margin-bottom: 15px;
+}
+
+.predicted-crop {
+    font-size: 24px;
+    color: #2d6a4f;
+    font-weight: bold;
+}
+
+.error-box {
+    color: #b02a37;
+}
+
+.placeholder-box {
+    color: #777;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    .result-container {
+        border-left: none;
+        border-top: 2px solid #e0e0e0;
+        height: auto;
+    }
+}
